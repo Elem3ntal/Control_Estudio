@@ -37,7 +37,7 @@ def limitoptions(v):
 class Course(models.Model):
     name = models.CharField(max_length=50)
     uc = models.PositiveSmallIntegerField()
-    cod = models.CharField(max_length=35)
+    code = models.CharField(max_length=35)
     status = models.BooleanField(default=True)
     id_teachers = models.ForeignKey(Personal, models.DO_NOTHING, db_column='Id_teachers', limit_choices_to = limitoptions(True)) 
     

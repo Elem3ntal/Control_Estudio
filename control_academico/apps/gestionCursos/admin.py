@@ -14,9 +14,9 @@ class AdminPersonal(admin.ModelAdmin):
 
 
 class AdminCourse(admin.ModelAdmin):
-    list_display = ["cod", "name", "uc"]
+    list_display = ["code", "name", "uc"]
     list_filter = ["name"]
-    search_fields = ["cod"]
+    search_fields = ["code"]
     class Meta:
         model = Course
 
