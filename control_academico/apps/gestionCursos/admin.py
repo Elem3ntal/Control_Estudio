@@ -14,9 +14,9 @@ class AdminPersonal(admin.ModelAdmin):
 
 
 class AdminCourse(admin.ModelAdmin):
-    list_display = ["code", "name", "uc"]
+    list_display = ["code", "name", "uc", "status"]
     list_filter = ["name"]
-    search_fields = ["code"]
+    search_fields = ["code","status"]
     class Meta:
         model = Course
 
@@ -26,14 +26,15 @@ class AdminEnrollment(admin.ModelAdmin):
     list_filter = ["id_course"]
     search_fields = ["id_course"]
     class Meta:
-        model = Course
+        model = Enrollment
+        
 
 class AdminTest(admin.ModelAdmin):
     list_display = ["id_enrollment", "ptos"]
     list_filter = ["id_enrollment"]
     #search_fields = ["id_course"]
     class Meta:
-        model = Course
+        model = Test
 
 
 admin.site.register(Personal, AdminPersonal) 

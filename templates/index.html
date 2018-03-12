@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" />
+
+	<style>
+		.title{ 
+			width: 400px; 
+			margin: 0 auto; 
+			text-align: center;
+			margin-top: 25px !important;
+			margin-bottom: 3.5rem !important;	 
+		}
+
+		div{
+			width: 400px;
+			margin: 0 auto;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+			
+		}
+	</style>
+
+</head>
+<body>
+	<div>
+		<h1 class="title">List' Students</h1>
+	</div>
+
+	<div>
+		<table class="listar table table-striped table-bordered">
+			<thead>
+				<tr>
+					<td>Name</td>
+					<td>Course</td>
+					<td>Average</td>
+				</tr>
+			</thead>
+			<tbody>
+			{% if alumnos %}
+				{% for alumno in alumnos %}
+					<tr>
+						<td>{{alumno.id_enrollment.id_student}}</td>
+						<td>{{alumno.id_enrollment.id_course}}</td>
+						<td>{{alumno.ptos}}</td>
+					</tr>
+				{% endfor %}
+			{% else %}
+				<div>
+					<h1>No existen registros de alumnos</h1>
+				</div>
+			{% endif %}
+			</tbody>
+		</table>
+	</div>
+</body>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+		$('.listar').DataTable();
+	} );
+	</script>
+
+</html>

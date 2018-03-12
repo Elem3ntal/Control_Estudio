@@ -3,8 +3,7 @@ from django.db.models import Q
 
 # Create your models here.
 
-class Personal(models.Model):
-    
+class Personal(models.Model): 
     sexes = (('F','Femenino'),('M','Masculino'))
     personal_type = (('P','Profesor'),('A','Alumno'))
 
@@ -51,7 +50,7 @@ class Enrollment(models.Model):
     date_enrollment = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        strings = "{0} {1}"
+        strings = "{0} => {1}"
         return strings.format(self.id_student, self.id_course.name)
 
         
