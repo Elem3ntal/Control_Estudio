@@ -134,3 +134,7 @@ LANGUAGES = [
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, "locale/"),
 )
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)

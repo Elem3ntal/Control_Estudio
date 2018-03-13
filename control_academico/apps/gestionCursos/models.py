@@ -61,3 +61,4 @@ class Test(models.Model):
     def __str__(self):
         strings = "{0}, {1}"
         return strings.format(self.id_enrollment, self.ptos)
+
