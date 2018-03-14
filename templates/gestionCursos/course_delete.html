@@ -1,0 +1,11 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div style="width: 53%;margin: 0 auto;">
+
+    <form method="post">{% csrf_token %}
+        ¿Estás seguro que deseas borrar el curso "{{ object }}"?
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+{% endblock %}

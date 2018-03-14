@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div style="width: 53%;margin: 0 auto;">
+
+    <h1 >Cursos de Platzi</h1>
+    
+    <p>
+        <a href="{% url "new" %}">Agregar curso</a>
+    </p>
+    
+    <ul>
+        {% for course in object_list %}
+        <li>
+            <p>{{ course.name }}</p>
+            <p>
+                <a href="{% url "detail" course.id %}">Ver</a> | 
+                <a href="{% url "edit" course.id %}">Editar</a> | 
+                <a href="{% url "delete" course.id %}">Borrar</a> 
+            </p>
+        </li>
+    {% endfor %}
+</ul>
+</div>
+{% endblock %}

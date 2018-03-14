@@ -23,7 +23,7 @@
                 <input type="text" id="buscador" placeholder="search...">
             </li>
             
-            <a href="http://127.0.0.1:8000/index/">
+            <a href="{% url "index" %}"> 
                 <li>
                     <div class="barra"></div>
                     <p class="menu">Inicio</p>
@@ -33,11 +33,11 @@
             <a href="http://127.0.0.1:8000/admin/">
                 <li>
                     <div class="barra"></div>
-                    <p class="menu">Aministrador</p>
+                    <p class="menu">Administrador</p>
                 </li>
             </a>
 
-            <a href="http://127.0.0.1:8000/agenda/">
+            <a href="{% url "agenda" %}">
                 <li>
                     <div class="barra"></div>
                     <p class="menu">Agenda</p>
@@ -48,9 +48,9 @@
     </nav>
     {% endblock %}
 
-    {% block content %}
-    <h1>Aqui vami contenido base</h1>
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
+
 
     {% block filejs %}
     {% endblock %}

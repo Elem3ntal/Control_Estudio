@@ -10,6 +10,7 @@
     <div class="row">
 		
 		<div class="container col-lg-6 col-md-offset-3">
+            {% if alumnos %}
 			<table class="listar table table-striped table-bordered">
 				<thead>
 					<tr>
@@ -19,7 +20,6 @@
 					</tr>
 				</thead>
 				<tbody>
-				{% if alumnos %}
 					{% for alumno in alumnos %}
 					<tr>
 						<td>{{alumno.id_enrollment__id_student__names}}</td>
@@ -27,45 +27,47 @@
 						<td>{{alumno.dcount}}</td>
 					</tr>
 					{% endfor %}
-				{% else %}
-				<div>
-					<h1>No existen registros de alumnos</h1>
-				</div>
-				{% endif %}
 				</tbody>
-			</table>
+            </table>
+
+            <div class="filtro col-md-3">
+                <ul>
+                    <li>
+                        <div class=""></div>
+                        <p class="menu">Filtrar datos</p>
+                    </li>
+        
+                    <a href="{% url "index" %}"> 
+                        <li>
+                            <div class="barra"></div>
+                            <p class="menu">Todos</p>
+                        </li>
+                    </a>
+        
+                    <a href="{% url "alto" %}"> 
+                        <li>
+                            <div class="barra"></div>
+                            <p class="menu">Aprobados</p>
+                        </li>
+                    </a>
+                    
+                    <a href="{% url "bajo" %}"> 
+                        <li>
+                            <div class="barra"></div>
+                            <p class="menu">Reprobados</p>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            {% else %}
+                <div>
+                    <h1>No existen registros de alumnos</h1>
+                </div>
+            {% endif %}
         </div> 
     </div>
     
-    <div class="filtro col-md-2">
-        <ul>
-            <li>
-                <div class=""></div>
-                <p class="menu">Filtrar datos</p>
-            </li>
-
-            <a href="https://www.google.com">
-                <li>
-                    <div class="barra"></div>
-                    <p class="menu">Todos</p>
-                </li>
-            </a>
-
-            <a href="https://www.youtube.com/">
-                <li>
-                    <div class="barra"></div>
-                    <p class="menu">Promedio bajo</p>
-                </li>
-            </a>
-
-            <a href="https://www.youtube.com/">
-                <li>
-                    <div class="barra"></div>
-                    <p class="menu">Promedio alto</p>
-                </li>
-            </a>
-        </ul>
-    </div>
+    
 {% endblock%}
 
 {% block filejs %}

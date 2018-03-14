@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div style="width: 53%;margin: 0 auto;">
+
+    <h1>{{ course.name }}</h1>
+    <p>Fecha de inicio: <i>{{ course.uc }}</i></p>
+    <p>Fecha de fin: <i>{{ course.code }}</i></p>
+    <p>Fecha de fin: <i>{{ course.status }}</i></p>
+    <p>
+        <a href="{% url "list" %}">Regresar</a>
+    </p>
+</div>
+{% endblock %}

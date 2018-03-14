@@ -1,26 +1,28 @@
-"""control_academico URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url, include
 #from control_academico.apps.gestionCursos import views
 from control_academico.apps.gestionCursos import views
 
+from control_academico.apps.gestionCursos.views import (
+    CourseList,
+    CourseDetail,
+    CourseCreation,
+    CourseUpdate,
+    CourseDelete
+)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.index, name='index'),
+    path('', views.index, name='index'),
     path('agenda/', views.agenda, name='agenda'),
+    path('bajo/', views.bajo, name='bajo'),
+    path('alto/', views.alto, name='alto'),
+    url(r'^cursos/$', CourseList.as_view(), name='list'),
+    url(r'^cursos/(?P<pk>\d+)$', CourseDetail.as_view(), name='detail'),
+    url(r'^cursos/nuevo$', CourseCreation.as_view(), name='new'),
+    url(r'^cursos/editar/(?P<pk>\d+)$', CourseUpdate.as_view(), name='edit'),
+    url(r'^cursos/borrar/(?P<pk>\d+)$', CourseDelete.as_view(), name='delete'),
+    url(r'^api/calendar/$', views.calendar, name='calendar'),
     
 ]
