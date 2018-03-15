@@ -4,7 +4,7 @@ Sistema de informaciónde de un control de estudio que consta de 4 modulos: Pers
 
 Indicaciones  para levantar el sistema:
 
-1.- git clone https://github.com/martinPalencia/Gestion-de-cursos.git
+1.- git clone https://github.com/martinPalencia/Control_Estudio.git
 
 2.- Instalar las herramientas neceasrias:
         pip -r requirements.txt

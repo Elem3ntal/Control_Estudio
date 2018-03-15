@@ -39,8 +39,8 @@ function calendar(){
                 id1 = "#"+key+"_"+v.start_time.replace(':','');
                 id2 = "#"+key+"_"+v.end_time.replace(':','');
                 console.log('#'+key+"_"+v.end_time.replace(':',''))
-                $(id1).css({background:'#ccc'}).html(v.name+"INicio");
-                $(id2).html(v.name+"Fin");
+                $(id1).css({background:'#E4EEF0'}).html(v.name+" Inicio");
+                $(id2).css({background:'#B2BDC1'}).html(v.name+" Fin");
             });
 
         })
