@@ -86,7 +86,7 @@ header{
 	height: 50px;
 	margin: 0px;
 	background: #2d2d2d;
-	    position: fixed;
+	position: fixed;
     top: 0;
     z-index: 9;
 }
@@ -121,7 +121,7 @@ header{
 
 
 .filtro{
-	position: absolute;
+	position: absolute !important;
 	padding: 0px;
 	float: right; 
 	width: 100px;
@@ -131,14 +131,27 @@ header{
 	align-items: center !important;
 	background-color: #2d2d2d;
 	border-radius:15px;
-	top: -260px;
- 	left: 240px !important;
+	top: -7px;
+ 	right: -229px !important;
  	height: 200px;
 }
 
 .contenido{
 	width: 400px;
 	height: 400px;
+}
+
+div.sub_barra{
+	position: absolute;
+	height: 50px;
+	width: 0px;
+	background-color: #aaa;
+	opacity: .1;
+	-webkit-transition: width .2s;
+}
+
+li:hover div.sub_barra{
+	width:140px;
 }
 
 

@@ -1,25 +1,34 @@
 {% extends 'base/base.html' %}
+{% load staticfiles %}
 
+{% block filecss %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/course.css' %}" />
+{% endblock %}
 {% block content %}
-<div style="width: 53%;margin: 0 auto; top:50px;">
+<div class="content_course">
 
-    <h1 >Cursos de Platzi</h1>
+    <div class="title">
+        <h1>Administrar Cursos</h1>
+    </div>
     
-    <p>
-        <a href="{% url "new" %}">Agregar curso</a>
-    </p>
-    
-    <ul>
-        {% for course in object_list %}
-        <li>
-            <p>{{ course.name }}</p>
-            <p>
-                <a href="{% url "detail" course.id %}">Ver</a> | 
-                <a href="{% url "edit" course.id %}">Editar</a> | 
-                <a href="{% url "delete" course.id %}">Borrar</a> 
-            </p>
-        </li>
-    {% endfor %}
-</ul>
+    <div class="content_table">
+        <p>
+            <a href="{% url "new" %}">Agregar curso</a>
+        </p>
+
+        <ul>
+            {% for course in object_list %}
+            <li>
+                <p>{{ course.name }}</p>
+                <p>
+                    <a href="{% url "detail" course.id %}">Ver</a> | 
+                    <a href="{% url "edit" course.id %}">Editar</a> | 
+                    <a href="{% url "delete" course.id %}">Borrar</a> 
+                </p>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+
 </div>
 {% endblock %}

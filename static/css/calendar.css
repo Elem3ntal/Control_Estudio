@@ -51,4 +51,15 @@
     width: 960px;
     margin-top: 95px !important;
     margin-left: 282px !important;
+    margin-bottom: 50px;
+}
+
+.algo{
+    background: rgb(197, 206, 209);
+    color: rgb(210, 225, 241);
+    font-weight: bold;
+    width: 960px;
+    margin-top: 95px !important;
+    margin-left: 282px !important;
+    margin-bottom: 50px;
 }

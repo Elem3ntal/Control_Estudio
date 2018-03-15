@@ -21,14 +21,14 @@ def index(request):
 	return render(request, "index.html", context)
 
 
-def bajo(request):
+def reprobados(request):
 	alumno = Test.objects.all().values('id_enrollment__id_student__surnames' ,'id_enrollment__id_student__names').annotate(dcount=Avg('ptos')).exclude(dcount__gte=10)
 	context = {
     	"alumnos" : alumno,
 	}
 	return render(request, "index.html", context)
 
-def alto(request):
+def aprobados(request):
 	alumno = Test.objects.all().values('id_enrollment__id_student__surnames' ,'id_enrollment__id_student__names').annotate(dcount=Avg('ptos')).filter(dcount__gte=10)
 	context = {
     	"alumnos" : alumno,

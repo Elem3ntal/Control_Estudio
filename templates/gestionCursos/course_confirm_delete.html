@@ -1,7 +1,12 @@
 {% extends 'base/base.html' %}
+{% load staticfiles %}
+
+{% block filecss %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/course.css' %}" />
+{% endblock %}
 
 {% block content %}
-<div style="width: 53%;margin: 0 auto;">
+<div class="content_course">
 <form method="post">{% csrf_token %}
     ¿Estás seguro que deseas borrar el curso "{{ object }}"?
     <input type="submit" value="Submit" />

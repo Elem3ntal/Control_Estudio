@@ -14,7 +14,6 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +26,6 @@ SECRET_KEY = 'bg1$bhc#zb*31y6))=op7ye&(+=g=9s)bfqgh7l_)a^1ta*#fk'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
