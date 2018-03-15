@@ -1,4 +1,5 @@
 {% extends 'base/base.html' %}
+{% load staticfiles %} 
 
 {% block filecss %}
     <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" />
@@ -65,20 +66,13 @@
                 </div>
             {% endif %}
         </div> 
-    </div>
-    
-    
+    </div>    
 {% endblock%}
 
 {% block filejs %}
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-        $('.listar').DataTable();
-    } );
-    </script>
+    <script src ="{% static 'js/index.js' %}"></script>
 {% endblock %}
 

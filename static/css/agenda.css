@@ -1,28 +1,54 @@
-.Table{
-    display: table;  
-}  
+.contenedor {
+    display: table;
+    border: 1px solid rgb(253, 251, 251);
+    width: 967;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 250px;
+    margin-left: 206px;
+    font-size: 19px;
+}
 
-.Title{  
-    display: table-caption;  
-    text-align: center;  
-    font-weight: bold;  
-    font-size: larger;  
-}  
+.fila {
+    display: table-row;
+}
 
-.Heading {  
-    display: table-row;  
-    font-weight: bold;  
-    text-align: center;  
-}  
+.columna{
+    width:400px;
+    display: table-cell;
+    border: 1px solid rgb(252, 248, 248);
+    vertical-align: middle;
+    padding: 10px;
+}
 
-.Row {  
-     display: table-row;  
-}  
+.cabecera{
+    background: rgb(175, 223, 241);
+    color: darkblue;
+    font-weight: bold;
+}
 
-.Cell{  
-    display: table-cell;  
-    border: solid;  
-    border-width: thin;  
-    padding-left: 5px;  
-    padding-right: 5px;  
-} 
+.boton{
+    background: rgb(105, 163, 185);
+    color: darkblue;
+    font-weight: bold;
+}
+
+.tabla {
+    display: table;
+    border: 1px solid rgb(253, 251, 251);
+    width: 967;
+   /* margin-top: 250px;*/
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 206px;
+    font-size: 19px;
+}
+
+.side{
+    background: rgb(197, 206, 209);
+    color: rgb(105, 119, 134);
+    font-weight: bold;
+    width: 960px;
+    margin-top: 95px !important;
+    margin-left: 282px !important;
+}

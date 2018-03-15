@@ -39,7 +39,6 @@ def agenda(request):
 	return render(request, "agenda.html", {})
 
 def calendar(request):
-	#data = json.load(open("C:\\Users\\Martin\\Desktop\\Destacame\\control_academico\\templates\calendar.json"))
 	data = json.load(open("C:\\Users\\Martin\\Desktop\\Destacame\\control_academico\\static\\js\calendar.json"))
 	return JsonResponse(data)
 

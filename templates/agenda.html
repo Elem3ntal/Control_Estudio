@@ -1,66 +1,16 @@
 {% extends 'base/base.html' %}
+{% load staticfiles %} 
+    
+{% block filecss %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/agenda.css' %}" />
+{% endblock %}
 
 {% block content %}
-<h1>NO VEO NADA</h1>
-<div class="Title">  
-        <p>Agenda</p>  
-    </div>  
+    <div id="Agenda" class="sides contenedor side "> </div>
+{% endblock %}
 
-    <div class="Table">  
-        <div class="Heading">  
-            <div class="Cell">  
-                <p> << </p>  
-            </div>  
+{% block filejs %}
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src ="{% static 'js/calendario.js' %}"></script>   
+{% endblock %}
 
-            <div class="Cell">    
-                <p>lunes 09</p>    
-            </div>  
-
-            <div class="Cell">    
-                <p>Martes 10</p>   
-            </div> 
-
-            <div class="Cell">  
-                <p>Miercoles 11</p>  
-            </div>  
-
-            <div class="Cell">    
-                <p>Jueves 12</p>    
-            </div>  
-
-            <div class="Cell">    
-                <p>Viernes 13</p>   
-            </div>  
-
-            <div class="Cell">  
-                <p>Sabado 14</p>  
-            </div>  
-
-            <div class="Cell">    
-                <p>Domingo 15</p>    
-            </div>  
-
-            <div class="Cell">    
-                <p> >> </p>   
-            </div> 
-        </div>  
-
-        <div class="Row">  
-
-            <div class="Cell">    
-                <p>   
-                    Juan</p>   
-            </div>  
-
-            <div class="Cell">  
-                <p>  
-                    Escutia</p>  
-            </div>  
-
-            <div class="Cell">  
-                <p>  
-                    28</p>  
-            </div>  
-        </div>   
-    </div>  
- {% endblock %}
